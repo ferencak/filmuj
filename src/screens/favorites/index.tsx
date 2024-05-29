@@ -5,13 +5,14 @@ import { useRecoilValue } from 'recoil'
 import { Routes } from '@enums/routes'
 import PageLayout from '@layouts/PageLayout'
 import { favoriteMoviesState } from '@store/favoriteMovies'
-import { Column } from '@styles/globals'
+import { Column, Row } from '@styles/globals'
 import {
   ItemsGrid,
   Movie,
   MoviePoster,
   MovieTitle,
   PageWrapper,
+  Tag,
   Title,
 } from './style'
 
@@ -35,6 +36,10 @@ const Favorites: FC = (): JSX.Element => {
                 <Movie>
                   <MoviePoster src={movie.Poster} alt={movie.Title} />
                   <MovieTitle>{movie.Title}</MovieTitle>
+                  <Row alignItems='center' gap={".5rem"}>
+                    <Tag>{movie.Year}</Tag>
+                    <Tag>{movie.Type}</Tag>
+                  </Row>
                 </Movie>
               </Link>
             ))}
