@@ -9,7 +9,7 @@ import withParams from '@hoc/withParams'
 import type { Movie as MovieType } from '@interfaces/movie'
 import type { Response } from '@interfaces/response'
 import PageLayout from '@layouts/PageLayout'
-import { Column } from '@styles/globals'
+import { Column, Row } from '@styles/globals'
 import { fetcher } from '@utils/fetcher'
 import {
   ItemsGrid,
@@ -17,6 +17,7 @@ import {
   MoviePoster,
   MovieTitle,
   PageWrapper,
+  Tag,
   Title,
 } from './style'
 
@@ -72,6 +73,10 @@ const SearchResults: FC<Props> = ({ query }): JSX.Element => {
                       <Movie>
                         <MoviePoster src={movie.Poster} alt={movie.Title} />
                         <MovieTitle>{movie.Title}</MovieTitle>
+                        <Row alignItems='center' gap={".5rem"}>
+                          <Tag>{movie.Year}</Tag>
+                          <Tag>{movie.Type}</Tag>
+                        </Row>
                       </Movie>
                     </Link>
                   ))
