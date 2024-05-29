@@ -18,6 +18,13 @@ export const MovieTitle = styled.h2`
   font-size: .9em;
   font-weight: 600;
   margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  max-height: 3em;
 `
 
 export const Tag = styled.span`
