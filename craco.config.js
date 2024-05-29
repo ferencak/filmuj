@@ -1,19 +1,10 @@
 const path = require('path');
-const DotEnv = require('dotenv');
 const webpack = require('webpack');
 
-const ENV = process.env.DEPLOY_ENV || 'dev';
-const result = DotEnv.config({ path: `./.env.${ENV}` });
-
-if (result.error) {
-  throw result.error;
-}
-
-const env = DotEnv.config({ path: `./.env.${ENV}` }).parsed;
-const envLocal = DotEnv.config({ path: './.env.local' }).parsed || {};
-
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next.trim()}`] = (envLocal[next]) ? JSON.stringify(envLocal[next].trim()) : JSON.stringify(env[next].trim());
+const envKeys = Object.keys(process.env).reduce((prev, next) => {
+  if (next.startsWith('REACT_APP_')) {
+    prev[`process.env.${next}`] = JSON.stringify(process.env[next]);
+  }
   return prev;
 }, {});
 
