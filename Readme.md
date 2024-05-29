@@ -7,8 +7,8 @@ Welcome to **Filmuj**, the all-in-one solution to find movies or TV shows to wat
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ferencak/filmuj-tv
-cd filmuj-tv
+git clone https://github.com/ferencak/filmuj
+cd filmuj
 ```
 
 2. Install dependencies:
