@@ -1,5 +1,3 @@
-# Filmuj
-
 ![Filmuj Logo](https://i.imgur.com/5HgBkOR.png)
 
 Welcome to **Filmuj**, the all-in-one solution to find movies or TV shows to watch. Filmuj is a web application that allows users to search for tips on what to watch, based on name. The application uses the [Omdb API](https://www.omdbapi.com/) to fetch data about movies and TV shows.
