@@ -13,9 +13,11 @@ const Header: FC = (): JSX.Element => {
     <HeaderWrapper>
       <Logo />
       <HeaderContent>
-        <Button variant="link" href="/favorites">
-          Oblíbené filmy ({movies.length})
-        </Button>
+        {movies.length > 0 && (
+          <Button variant="link" href="/favorites">
+            Oblíbené filmy ({movies.length})
+          </Button>
+        )}
         <Search />
       </HeaderContent>
     </HeaderWrapper>
