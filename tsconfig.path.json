@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+	  "paths": {
+      "@components/*": ["components/*"],
+      "@screens/*": ["screens/*"],
+      "@enums/*": ["enums/*"], 
+      "@layouts/*": ["layouts/*"],
+      "@hoc/*": ["hoc/*"],
+      "@styles/*": ["styles/*"],
+      "@theme/*": ["theme/*"],
+      "@utils/*": ["utils/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@store/*": ["store/*"],
+      "@api/*": ["api/*"],
+      "@hooks/*": ["hooks/*"]
+    }
+	}
+}
