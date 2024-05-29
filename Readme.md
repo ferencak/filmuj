@@ -33,6 +33,7 @@ Filmuj is built with React (create-react-app) and uses the following libraries:
 - [React Router](https://reactrouter.com/)
 - [Styled Components](https://styled-components.com/)
 - [Iconsax Icons](https://iconsax-react.pages.dev/)
+- [Biome](https://biomejs.dev/)
 
 ## 🌟 Features
 
